@@ -1,0 +1,131 @@
+---
+layout: default
+permalink: /devis
+title: 
+description:
+---
+
+<section class="banner section-y">
+  <div class="container">
+    <div class="banner_content">
+      <h1 class="banner_content-title">Devis en ligne</h1>
+    </div>
+  </div>
+</section>
+
+<section class="contact section-y">
+  <div class="container">
+    <div class="menu_content">
+      <h2 class="menu_content-title text-left mb-0">Demandez un <strong>devis</strong></h2>
+    </div>
+    <form class="form contact_content-form" id="devisForm" method="post" action="{{ site.data.company.url.notify }}">
+      <input type="hidden" name="lang" value="{{ site.data.company.lang }}" />
+      <input type="hidden" name="type" value="devis" />
+      <input type="hidden" name="firstName" value="" />
+      <input type="hidden" name="redirectUrl" value="{{site.data.company.url.redirect}}" />
+      <input type="hidden" name="key" value="{{ site.data.company.recaptcha.server }}" />
+      <input type="hidden" name="website" value="{{site.data.company.website}}" />
+    <div class="row">
+      <div class="col-md-6">
+        <div class="menu_content mb-0">
+          <p class="menu_content-header3 text-left">Coordonnées</p>
+        </div>
+        <div class="contact_content">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="contact_content-form--input" id="prenom" name="prenom" placeholder="Prenom" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="contact_content-form--input" id="name" name="name" placeholder="Nom" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="contact_content-form--input" id="address" name="address" placeholder="Adresse*" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="contact_content-form--input" id="postal" name="postal" placeholder="Code postal*" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="contact_content-form--input" id="ville" name="ville" placeholder="Ville*" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="contact_content-form--input" id="phone" name="phone" placeholder="Téléphone" />
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="text" class="contact_content-form--input" id="email" name="email" placeholder="Email" />
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="menu_content mb-0">
+          <p class="menu_content-header3 text-left">Demande</p>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group has-feedback">
+              <label class="slider_form-label text-left justify-content-start text-black f-w-700">Type de prestations</label>
+              <div class="row flex-column align-items-start">
+                <div class="col-sm-4">
+                  <div class="checkbox" style="margin-top: 0;">
+                    <label class="slider_form-label text-left justify-content-start text">
+                      <input type="checkbox" name="checkbox1"> &nbsp; Obsèques
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="checkbox" style="margin-top: 0;">
+                    <label class="slider_form-label text-left justify-content-start text">
+                      <input type="checkbox" name="checkbox2"> &nbsp; Prévoyance
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="checkbox" style="margin-top: 0;">
+                    <label class="slider_form-label text-left justify-content-start text">
+                      <input type="checkbox" name="checkbox3"> &nbsp; Monument
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <textarea class="contact_content-form--textarea" id="commentaire" rows="5" placeholder="Message"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="checkbox d-flex mb-5">
+      <input name="condition" type="checkbox" style="height:2rem; width:2rem; vertical-align: middle; margin-right: 1rem;" />
+      <span class="contact_content-form--label" style="font-size: 1.4rem;">
+        En utilisant ce formulaire, vous acceptez le stockage et la gestion de vos données par ce site *
+      </span>
+      <i class="fa fa-info-square" aria-hidden="true"></i>
+    </div>
+    <div class="form-group d-flex justify-content-center">
+      <div class="g-recaptcha" data-sitekey="{{ site.data.company.recaptcha.client }}"></div>
+      <br />
+      <div id="devis-form-response"></div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button disabled type="submit" class="contact_content-form--btn form-submit" value="Submit">Envoyer</button>
+    </div>
+  </form>
+  </div>
+</section>

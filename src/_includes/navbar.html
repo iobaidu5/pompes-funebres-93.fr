@@ -1,0 +1,82 @@
+<section class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="header_content">
+          <a href="tel:{{site.data.company.tel}}" class="header_content-link bg-sec-link">
+            Urgence dècès, 24h/24 7j/7 :<br>
+            {{site.data.company.phone}}
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="header_content">
+          <a href="{% link devis.html %}" class="header_content-link">Devis gratuit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="Navbar_home">
+  <div class="container-fluid">
+    <nav class="navbar Navbar_main navbar-expand-lg fixedNav">
+      <div class="w-100">
+        <div class="row align-items-center">
+          <div class="col-md-2">
+            <div class="navbar_image">
+              <a href="{% link accueil.html %}" title="Accueil"><img loading="lazy" src="../assets/img/logo.png"
+                  class="navbar_image-img" alt="pompes-funebres-93.fr logo" /></a>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <p class="nav-link navbar_nav-li--p d-flex align-items-center">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i> &nbsp; {{site.data.company.address}}</p>
+          </div>
+        </div>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar"
+          aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars toggle-button navbar_toggler-icon" aria-hidden="true"></i>
+        </button>
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-10">
+            <div class="collapse navbar-collapse navbar_nav navbar_collapse" id="navbar">
+              <ul class="navbar-nav navbar_nav-ul mx-auto w-100">
+                <li class="nav-item navbar_nav-li">
+                  <a class="nav-link navbar_nav-li--link d-flex align-items-center"
+                    href="{% link accueil.html %}">Accueil</a>
+                </li>
+                <li class="nav-item navbar_nav-li">
+                  <a class="nav-link navbar_nav-li--link d-flex align-items-center"
+                    href="{% link obseques.html %}">Obsèques</a>
+                </li>
+                <li class="nav-item navbar_nav-li">
+                  <a class="nav-link navbar_nav-li--link d-flex align-items-center" href="{% link prevoyance.html %}">Prévoyance</a>
+                </li>
+                <li class="nav-item navbar_nav-li">
+                  <a class="nav-link navbar_nav-li--link d-flex align-items-center" href="{% link monuments.html %}">Monuments</a>
+                </li>
+                <li class="nav-item navbar_nav-li">
+                  <a class="nav-link navbar_nav-li--link d-flex align-items-center"
+                    href="{% link contact.html %}">Contact</a>
+                </li>
+                <li class="nav-item navbar_nav-li">
+                 <a href="{% link configurateur-de-monuments.html %}" class="nav-link navbar_nav-li--btn d-flex align-items-center">Configurateur de monument</a>
+                </li>
+                <li class="nav-item navbar_nav-li">
+                  <a href="https://avis-de-deces.pompes-funebres-93.fr/" target="_blank" class="nav-link navbar_nav-li--btn d-flex align-items-center">Avis de décès</a>
+                </li>
+                <li class="nav-item navbar_nav-li">
+                  <a href="https://espace-famille.pompes-funebres-93.fr/signin" target="_blank" class="nav-link navbar_nav-li--btn d-flex align-items-center">Espace Famille</a>
+                </li>
+                <li class="nav-item navbar_nav-li">
+                  <a href="https://boutique.pompes-funebres-93.fr/" target="_blank" class="nav-link navbar_nav-li--btn d-flex align-items-center">Fleurs de deuil</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</section>
