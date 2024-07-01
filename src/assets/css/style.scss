@@ -630,6 +630,7 @@ body {
       width: 100%;
       max-width: 100%;
       height: auto;
+      object-fit: cover;
     }
 
     &-img2{
@@ -1345,6 +1346,10 @@ body {
     transition: 0.5s;
   }
 
+  &-2{
+    background-color: #000;
+  }
+
 
   &_content{
     padding: 7.5rem 0;
@@ -1751,6 +1756,12 @@ body {
     width: 100%;
     background-color: #000;
     color: white;
+
+    &:hover{
+      text-decoration: none;
+      color: var(--color-secondary) !important;
+      cursor: pointer;
+    }
     }
     .bottom{
       padding: 2.5rem 1rem;
@@ -1985,6 +1996,42 @@ input[type=number] {
   overflow: hidden;
   transition: opacity 0.2s ease-in-out;
 }
+
+.owl-dots {
+  text-align: center !important; /* Center the dots */
+  margin-top: 1rem !important; /* Add some space above the dots */
+}
+
+.owl-dot {
+  display: inline-block !important; /* Display dots inline */
+  width: 1rem !important; /* Width of each dot */
+  height: 1rem !important; /* Height of each dot */
+  margin: .5rem !important; /* Space between dots */
+  background-color: #ccc !important; /* Default background color */
+  border-radius: 50% !important; /* Make dots circular */
+  transition: background-color 0.3s ease !important; /* Smooth transition for background color */
+}
+
+.owl-dot span {
+  display: none !important; /* Hide default span inside dot */
+}
+
+.owl-dot.active {
+  background-color: #333 !important; /* Background color for active dot */
+}
+
+.owl-dot:hover {
+  background-color: #666 !important; /* Background color when dot is hovered */
+}
+
+#owl .owl-next{
+  display: none !important;
+}
+
+#owl .owl-prev{
+  display: none !important;
+}
+
 
 // Imports
 @import "bootstrap";

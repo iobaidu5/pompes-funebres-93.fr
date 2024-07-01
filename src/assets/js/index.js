@@ -51,22 +51,23 @@ $(document).ready(function() {
 });
 
 
-var owl = $("#owl");
+$(document).ready(function () {
+  var owl = $(".owl");
   owl.owlCarousel({
     items: 1,
-    navigation: true,
+    nav: false,
     loop: true,
     autoplay: true,
     margin: 20,
     autoplayTimeout: 5000,
     autoplayHoverPause: false,
-    dots: false,
+    dots: true,
     animateIn: "fadeIn",
     animateOut: "fadeOut",
-    navText: [
-      "<i class='fas fa-chevron-left owlNav-left'></i>",
-      "<i class='fas fa-chevron-right owlNav-right'></i>",
-    ],
+    // navText: [
+    //   "<i class='fas fa-circle owlNav-left'></i>",
+    //   "<i class='fas fa-circle owlNav-right'></i>",
+    // ],
     responsiveClass: true,
     responsive: {
       100: {
@@ -92,12 +93,28 @@ var owl = $("#owl");
       },
     },
   });
+
+  function limitDots() {
+    var dots = $('.owl-dot');
+    if (dots.length > 3) {
+      dots.slice(3).hide(); // Hide all dots after the third one
+    }
+  }
+
+  // Call the function to limit dots
+  limitDots();
+
+  // Reapply the limitDots function after each change (like when navigating)
+  owl.on('changed.owl.carousel', function (event) {
+    limitDots();
+  });
   $(".play").on("click", function () {
     owl.trigger("play.owl.autoplay", [5000]);
   });
   $(".stop").on("click", function () {
     owl.trigger("stop.owl.autoplay");
   });
+});
 
 
   $(document).ready(function () {
