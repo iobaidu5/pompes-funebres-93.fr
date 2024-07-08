@@ -10,13 +10,13 @@ address: Marbrerie de Neuilly
 location: 88 Rue Paul et Camille Thomoux 93330 Neuilly-Sur-Marne
 
 websiteAddr: bhinternet.fr
-website: 
+website: 347
 
 recaptcha:
-  client: 6LdQdf8pAAAAACoSpYD6pawtLas8acIL_zkv8VZa
-  server: 6LdQdf8pAAAAAPNjjaYX_BP2nJPZN_43bl64V6j6
+  client: 6Ld9awMqAAAAAOWE_dksFZAbRlpMIudYUHVD9fKa
+  server: 6Ld9awMqAAAAAKb8bxJFkTN7QJLmwe74Kugm_yCZ
   
 lang: fr
 url:
   notify: 'https://jgviaboye9.execute-api.eu-west-3.amazonaws.com/prod/notify'
-  redirect: '/message-success'
+  redirect: '/message-envoye'

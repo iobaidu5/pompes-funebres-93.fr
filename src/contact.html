@@ -1,8 +1,8 @@
 ---
 layout: default
 permalink: /contact
-title:
-description:
+title: Contact - LE BARON FUNERAIRE - 01 43 08 04 42
+description: N'hésitez pas à nous contactez via notre formulaire en ligne ou par téléphone au 01 43 08 04 42.
 keywords:
 ---
 
@@ -16,12 +16,12 @@ keywords:
 
 
 <section class="contact section-y">
-  <div class="container">
+  <div class="container to-100-per-768">
     <div class="row align-items-center">
       <div class="col-md-6">
         <div class="menu_content">
           <h2 class="menu_content-title text-left">Contactez nous !</h2>
-          <p class="menu_content-header text-left">Remplissez notre formulaire en ligne</p>
+          <h3 class="menu_content-header text-left">Remplissez notre formulaire en ligne</h3>
         </div>
         <div class="contact_content">
           <form class="form contact_content-form" id="contactForm" method="post"
@@ -50,7 +50,7 @@ keywords:
                   <div class="col-md-12">
                     <div class="form-group">
                       <input type="text" class="contact_content-form--input" id="phone" name="phone"
-                        placeholder="Téléphone" /> ">
+                        placeholder="Téléphone" />
                     </div>
                   </div>
                   <div class="col-md-12">
@@ -64,20 +64,21 @@ keywords:
                   <textarea class="contact_content-form--textarea" id="commentaire" rows="5"
                     placeholder="Message"></textarea>
                 </div>
-                <div class="form-group">
+                <div class="checkbox d-flex mb-5">
+                  <input name="condition" type="checkbox"
+                    style="height:2rem; width:2rem; vertical-align: middle; margin-right: 1rem;" />
+                  <span class="contact_content-form--label" style="font-size: 1.4rem; color: #000;">
+                    En utilisant ce formulaire, vous acceptez le stockage et la gestion
+                    de vos données par ce site * <a href="#" data-toggle="modal" class="link"
+                      data-target="#modal-rgpd"><i class="fa fa-info-circle"></i></a></span>
+                  <i class="fa fa-info-square" aria-hidden="true"></i>
+                </div>
+                <div id="contact-form-response"></div>
+                <div class="form-group d-flex justify-content-center">
                   <div class="g-recaptcha" data-sitekey="{{ site.data.company.recaptcha.client }}">
                   </div>
                   <br />
                   <input style="display: none" type="submit" value="Submit" class="wpcf7-wpcf7-submit" />
-                </div>
-                <div id="contact-form-response"></div>
-                <div class="checkbox d-flex mb-5">
-                  <input name="condition" type="checkbox"
-                    style="height:2rem; width:2rem; vertical-align: middle; margin-right: 1rem;" />
-                  <span class="contact_content-form--label" style="font-size: 1.4rem;">
-                    En utilisant ce formulaire, vous acceptez le stockage et la gestion
-                    de vos données par ce site *</span>
-                  <i class="fa fa-info-square" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
@@ -126,3 +127,23 @@ keywords:
     </div>
   </div>
 </section>
+
+<div class="modal fade" id="modal-rgpd" tabindex="-1" role="dialog" aria-labelledby="modal-rgpd-label"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body"> * En cochant cette case, j’accepte que mes données personnelles soient collectées et
+        traitées par le service commercial de Agence Funéraire LEBARON 93. Leur traitement a pour finalité de traiter
+        votre demande spécifique.<br> Les données collectées sont conservées pour la durée de nos relations commerciales
+        + 1 an. Conformément à la loi « informatique et libertés », vous pouvez exercer votre droit d’accès aux données
+        vous concernant et les faire rectifier auprès de notre référent à <a class="link" href="mailto:gence.nsm@lebaronfuneraire.fr">agence.nsm@lebaronfuneraire.fr</a>.<br> Vous disposez également d’un droit
+        de rectification, à l’oubli, à la portabilité, de limitation ou d’opposition auprès de notre référent à <a
+          href="mailto:agence.nsm@lebaronfuneraire.fr" class="link">agence.nsm@lebaronfuneraire.fr</a>.<br><br> En dernier recours,
+        vous pouvez déposer une réclamation auprès de la CNIL. </div>
+      <div class="modal-footer">
+        <div class="form-group text-center"> <button type="button" class="btn btn-default btn-primary btn-modal"
+            data-dismiss="modal">Fermer</button> </div>
+      </div>
+    </div>
+  </div>
+</div>
