@@ -2,7 +2,7 @@ jQuery(document).ready(function ($) {
   var successMessage = `<i class="fa fa-info-circle"></i><b class="success-message">Succès:</b> Votre demande est envoyée avec succès`;
   var ErrorMessage = `<i class="fa fa-info-circle"></i><b class="error-message">Erreur:</b> Veuillez vérifier vos données d'entrée`;
   var checkbox = document.querySelector('input[name="condition"]');
-  var checkboxError = document.getElementById('checkboxError');
+  //var checkboxError = document.getElementById('checkboxError');
 
   $("#contactForm").on("submit", function (e) {
     sendFormData(e, "#contactForm", "contact");
@@ -19,12 +19,12 @@ jQuery(document).ready(function ($) {
       return false;
     }
 
-    if (!checkbox.checked) {
-      checkboxError.textContent = "Le formulaire n'est pas envoyé tant que vous n'acceptez pas ce point";
-      e.preventDefault(); 
-  } else {
-      checkboxError.textContent = ''; 
-  }
+  //   if (!checkbox.checked) {
+  //     checkboxError.textContent = "Le formulaire n'est pas envoyé tant que vous n'acceptez pas ce point";
+  //     e.preventDefault(); 
+  // } else {
+  //     checkboxError.textContent = ''; 
+  // }
 
     $.ajax({
       url: $(id)[0]["action"],
@@ -74,7 +74,7 @@ jQuery(document).ready(function ($) {
 var CaptchaCallback = function () {
   jQuery(".g-recaptcha").each(function () {
     grecaptcha.render(this, {
-      sitekey: "6Ld9awMqAAAAAOWE_dksFZAbRlpMIudYUHVD9fKa",
+      sitekey: "6LcCdw4qAAAAAOR29-bVjLF8wbDUDpmoQa_jHCt5",
       callback: correctCaptcha,
     });
   });

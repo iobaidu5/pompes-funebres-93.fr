@@ -208,7 +208,8 @@ body {
 }
 
 .Navbar_home {
-  padding: 2rem 0;
+  padding: 1.2rem 0;
+  margin-top: .5rem;
 
   @media only screen and (max-width: 990px) {
     padding: 0;
@@ -415,6 +416,7 @@ body {
       }
 
       &--btn {
+        font-family: "Open Sans", sans-serif;
         color: #fff !important;
         font-style: normal;
         padding: .7rem 1.5rem !important;
@@ -476,7 +478,7 @@ body {
 .slider {
   position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),  url("../img/slider.jpeg");
-  background-position: center;
+  // background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
@@ -526,6 +528,14 @@ body {
       padding: 3rem 0rem; /* Reduced from 5rem 0rem */
     }
 
+    &-inner{
+      width: 90%;
+
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
     &-label {
       color: #000;
       font-weight: 600;
@@ -538,13 +548,14 @@ body {
       font-size: 3.6rem;
       font-weight: 400;
       color: #fff;
-      line-height: 1;
+      line-height: 1.1;
       margin-bottom: 3rem;
 
       @media only screen and (max-width: 990px) {
         margin-top: 7rem;
         text-align: center;
       }
+
 
       // @media only screen and (max-width: 990px) {
       //   font-size: 6.5rem;
@@ -1041,7 +1052,10 @@ body {
         border: .2rem none transparent;
         box-shadow: 0px 0px 0px -.7rem rgba(0, 0, 0, 0);
         padding: 1.5rem 2.5rem !important;
-        white-space: nowrap;
+        margin-right: 0 !important;
+        white-space: normal !important;
+        display: block !important;
+        text-align: center !important;
         color: #fff !important;
         text-transform: none !important;
         border-radius: .3rem !important;
@@ -1392,7 +1406,7 @@ body {
       // width: 7rem;
       // height: 7rem;
       // font-size: 2.4rem;
-      left: 0;
+      //left: 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1429,12 +1443,13 @@ body {
 .nos-pages{
 
   @media only screen and (max-width: 768px) {
-    margin-left: 5rem !important;
+    //margin-left: 5rem !important;
+    margin: 1rem 0 !important;
    }
 
-   @media only screen and (max-width: 480px) {
-    margin-left: 3rem !important;
-   }
+  //  @media only screen and (max-width: 480px) {
+  //   margin-left: 3rem !important;
+  //  }
 }
 
 .service{
@@ -1484,6 +1499,10 @@ body {
 .color-black{
   color: #000 !important;
   background-color: #000 !important;
+}
+
+.to-14{
+  font-size: 1.4rem !important;
 }
 
 .footer{
@@ -2217,7 +2236,7 @@ input[type=number] {
   width: 1rem !important; /* Width of each dot */
   height: 1rem !important; /* Height of each dot */
   margin: .5rem !important; /* Space between dots */
-  background-color: #ccc !important; /* Default background color */
+  background-color: #d6d6d6 !important; /* Default background color */
   border-radius: 50% !important; /* Make dots circular */
   transition: background-color 0.3s ease !important; /* Smooth transition for background color */
 }
@@ -2227,11 +2246,11 @@ input[type=number] {
 }
 
 .owl-dot.active {
-  background-color: #333 !important; /* Background color for active dot */
+  background-color: #869791 !important; /* Background color for active dot */
 }
 
 .owl-dot:hover {
-  background-color: #666 !important; /* Background color when dot is hovered */
+  background-color: #869791 !important; /* Background color when dot is hovered */
 }
 
 #owl .owl-next{
